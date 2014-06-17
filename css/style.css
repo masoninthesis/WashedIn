@@ -1,0 +1,212 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* Set assets path for different color variation */
+/* Blueprint */
+.page .container:after, .signup form:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden; }
+
+body, h1, h2, h3, h4, h5, h6, ul, li, form, div, p {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  font-size: 0.875em;
+  /* 1 */
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+  background: #2292c0 url(images/background-pattern.png) top center; }
+
+h1, h2, h3, h4, h5 {
+  font-size: 1.286em; }
+
+div {
+  width: auto;
+  height: auto;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: white; }
+  a:hover {
+    text-decoration: none; }
+
+.header {
+  background: url(/images/austin-laundry.png) 50% 0 no-repeat fixed !important;
+  background-size: cover;
+  position: relative;
+  height: 647px; }
+  .header h1 {
+    padding-top: 5px;
+    padding-bottom: 145px; }
+  .header h2 {
+    font-size: 4.286em;
+    text-transform: uppercase; }
+    .header h2 span {
+      font-size: 1.417em; }
+  .header .overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6) url(images/pattern.png) top center; }
+  .header .counter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(16, 13, 13, 0.8); }
+    .header .counter .clock {
+      max-width: 700px;
+      padding: 40px 0; }
+      @media all and (max-width: 800px) {
+        .header .counter .clock {
+          width: 90%; } }
+      .header .counter .clock div {
+        display: inline-block;
+        border-right: 1px solid #686162;
+        padding: 20px 0;
+        width: 25%;
+        font-size: 4.286em;
+        line-height: .5em;
+        color: #01588d;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        .header .counter .clock div:last-child {
+          border-right: none;
+          color: #2292c0; }
+        .header .counter .clock div span {
+          font-size: 0.300em;
+          color: #686162; }
+
+.page {
+  text-align: center; }
+  .page .container {
+    max-width: 700px; }
+    @media all and (max-width: 800px) {
+      .page .container {
+        width: 90%; } }
+
+.details .container {
+  padding-top: 80px; }
+
+.social, .slider, .signup, .footer {
+  margin-bottom: 80px; }
+
+.signup {
+  width: 88.28571%; }
+  .signup h3 {
+    margin-bottom: 20px; }
+  .signup form {
+    padding: 2.91262%;
+    background: #01588d; }
+    .signup form input, .signup form button {
+      border: 5px solid white;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.286em;
+      height: 50px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .signup form input {
+      color: #2292c0;
+      background: white url(images/icon-email-x2.png) 14px center no-repeat;
+      background-size: 19px 14px;
+      padding: 5px 5px 5px 40px;
+      width: 67.96117%;
+      float: left; }
+      @media all and (max-width: 600px) {
+        .signup form input {
+          width: 100%;
+          margin-bottom: 2.91262%; } }
+    .signup form button {
+      width: 28.47896%;
+      color: white;
+      text-transform: uppercase;
+      background: #01588d;
+      float: right;
+      cursor: pointer;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      @media all and (max-width: 600px) {
+        .signup form button {
+          width: 100%; } }
+      .signup form button:hover {
+        background: white;
+        color: #01588d; }
+
+.slider {
+  width: 88.28571%;
+  position: relative; }
+  .slider p {
+    font-family: "Open Sans", sans-serif; }
+  .slider h3 {
+    font-size: 2.571em;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+  .slider .flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%; }
+    .slider .flex-direction-nav a {
+      font-family: FontAwesome;
+      font-size: 3em;
+      color: white;
+      text-align: center;
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 52px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      .slider .flex-direction-nav a.flex-prev:before {
+        content: "\f104"; }
+      .slider .flex-direction-nav a.flex-next:before {
+        content: "\f105"; }
+      .slider .flex-direction-nav a:hover {
+        color: #01588d;
+        opacity: .8; }
+    .slider .flex-direction-nav .flex-prev {
+      left: -11.71429%; }
+    .slider .flex-direction-nav .flex-next {
+      right: -11.71429%; }
+
+.social {
+  font-family: FontAwesome; }
+  .social li {
+    display: inline-block;
+    margin: 0 15px; }
+    .social li a {
+      font-size: 1.6em;
+      display: block;
+      width: 62px;
+      height: 72px;
+      line-height: 72px;
+      background: url(images/hexagon-x2.png);
+      background-size: 62px 72px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      .social li a:hover {
+        color: #01588d; }
+
+.footer {
+  font-size: 11px; }
+  .footer .copyright {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold; }
+  .footer .fa, .footer a {
+    color: #01588d; }

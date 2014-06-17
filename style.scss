@@ -42,7 +42,7 @@ a {
 }
 
 .header {
-  background: url(#{$assetPath}/man-using-tablet.jpg) 50% 0 no-repeat fixed;
+  background: url('images/austin-laundry.png') 50% 0 no-repeat fixed !important;
   background-size: cover;
   position: relative;
   height: 647px;
@@ -279,4 +279,8 @@ a {
   .fa, a {
     color: $form;
   }
+}
+
+.new-site {
+	padding-top: 120px;
 }

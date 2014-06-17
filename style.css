@@ -42,7 +42,7 @@ a {
     text-decoration: none; }
 
 .header {
-  background: url(images/man-using-tablet.jpg) 50% 0 no-repeat fixed;
+  background: url("images/austin-laundry.png") 50% 0 no-repeat fixed !important;
   background-size: cover;
   position: relative;
   height: 647px; }
@@ -210,3 +210,6 @@ a {
     font-weight: bold; }
   .footer .fa, .footer a {
     color: #01588d; }
+
+.new-site {
+  padding-top: 120px; }

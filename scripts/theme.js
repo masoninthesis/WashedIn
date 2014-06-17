@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
   // Clock
-  $('.clock').countdown('2014/10/10').on('update.countdown', function(event) {
+  $('.clock').countdown('2014/07/16').on('update.countdown', function(event) {
     var $this = $(this).html(event.strftime(''
     + '<div>%D<br><span>day%!d</span></div>'
     + '<div>%H<br><span>hour%!H</span></div>'
