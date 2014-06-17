@@ -1,0 +1,282 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import '_variables';
+@import '_mixins';
+@import '_placeholders';
+
+body, h1, h2, h3, h4, h5, h6, ul, li, form, div, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type:none;
+}
+
+body {
+  font-size: 0.875em; /* 1 */
+  font-family: $font;
+  text-align: center;
+  color: $text;
+  background: $background url(#{$assetPath}/background-pattern.png) top center;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 1.286em;
+}
+
+div {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: $text;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.header {
+  background: url(#{$assetPath}/man-using-tablet.jpg) 50% 0 no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  height: 647px;
+
+  h1 {
+    padding-top: 5px;
+    padding-bottom: 145px;
+  }
+
+  h2 {
+    font-size: 4.286em;
+    text-transform: uppercase;
+
+    span {
+      font-size: 1.417em;
+    }
+  }
+
+  .overlay {
+    height: 100%;
+    background: rgba(0,0,0,.6) url(#{$assetPath}/pattern.png) top center;
+
+  }
+
+  .counter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(16,13,13,.8);
+
+    .clock {
+      max-width: 700px;
+      padding: 40px 0;
+
+      @media all and (max-width: 800px) {
+        width: 90%;
+      }
+
+      div {
+        display: inline-block;
+        border-right: 1px solid #686162;
+        padding: 20px 0;
+        width: 25%;
+        font-size: 4.286em;
+        line-height: .5em;
+        color: $form;
+
+        @include box-sizing(border-box);
+
+        &:last-child {
+          border-right: none;
+          color: $background;
+        }
+
+        span {
+          font-size: 0.300em;
+          color: #686162;
+        }
+      }
+    } //.clock ends
+  } //.counter ends
+}
+
+.page {
+  text-align: center;
+
+  .container {
+    max-width: 700px;
+
+    @media all and (max-width: 800px) {
+      width: 90%;
+    }
+
+    @extend %clear;
+  }
+} //.main ends
+
+.details {
+
+  .container {
+    padding-top: 80px;
+  }
+}
+
+.social, .slider, .signup, .footer {
+  margin-bottom: 80px;
+}
+
+.signup {
+  width: 618px / 700px * 100%;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    padding: 18px / 618px * 100%;
+    background: $form;
+    @extend %clear;
+
+    input, button {
+      border: 5px solid $white;
+      font-family: $font;
+      font-size: 1.286em;
+      height: 50px;
+
+      @include box-sizing(border-box);
+    }
+
+    input {
+      color: $background;
+      background: #fff url(#{$assetPath}/icon-email-x2.png) 14px center no-repeat;
+      background-size: 19px 14px;
+      padding: 5px 5px 5px 40px;
+      width: 420px / 618px * 100%;
+      float: left;
+
+      @media all and (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 18px / 618px * 100%;
+      }
+    }
+
+    button {
+      width: 176px / 618px * 100%;
+      color: $white;
+      text-transform: uppercase;
+      background: $form;
+      float: right;
+      cursor: pointer;
+      @include transition(all, .2s);
+
+      @media all and (max-width: 600px) {
+        width: 100%;
+      }
+
+      &:hover {
+        background: $white;
+        color: $form;
+      }
+    }
+  }
+}
+
+.slider {
+  width: 618px / 700px * 100%;
+  position: relative;
+
+  p {
+    font-family: $slider-font;
+  }
+
+  h3 {
+    font-size: 2.571em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    a {
+      font-family: FontAwesome;
+      font-size: 3em; //replace fa-3x
+      color: $white;
+      text-align: center;
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 52px;
+
+      @include transition(all, .2s);
+
+      &.flex-prev:before {
+        content:"\f104";
+      }
+
+      &.flex-next:before{
+        content:"\f105";
+      }
+
+      &:hover {
+        color: $form;
+        opacity: .8;
+      }
+    }
+
+    .flex-prev {
+      left: -(82px / 700px * 100%);
+    }
+    .flex-next {
+      right: -(82px / 700px * 100%);
+    }
+  }
+
+} //.slider ends
+
+.social {
+  font-family: FontAwesome;
+
+  li {
+    display: inline-block;
+    margin: 0 15px;
+
+    a {
+      font-size: 1.6em;
+      display: block;
+      width: 62px;
+      height: 72px;
+      line-height: 72px;
+      background: url(#{$assetPath}/hexagon-x2.png);
+      background-size: 62px 72px;
+
+      @include transition(all, .2s);
+
+      &:hover {
+        color: $form;
+      }
+    }
+  }
+}
+
+.footer {
+  font-size: 11px;
+
+  .copyright {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .fa, a {
+    color: $form;
+  }
+}
